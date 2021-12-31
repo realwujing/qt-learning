@@ -1,0 +1,3 @@
+[submodule "qtdbus"]
+	path = qtdbus
+	url = https://github.com/realwujing/qtdbus.git
