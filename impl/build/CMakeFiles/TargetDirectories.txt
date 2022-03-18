@@ -1,0 +1,4 @@
+/home/wujing/code/cpp-learning/qt-learning/impl/build/CMakeFiles/rebuild_cache.dir
+/home/wujing/code/cpp-learning/qt-learning/impl/build/CMakeFiles/impl.dir
+/home/wujing/code/cpp-learning/qt-learning/impl/build/CMakeFiles/edit_cache.dir
+/home/wujing/code/cpp-learning/qt-learning/impl/build/CMakeFiles/impl_autogen.dir
