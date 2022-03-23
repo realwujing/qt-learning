@@ -1,4 +1,0 @@
-/home/wujing/code/cpp-learning/qt-learning/singals_slots/build/CMakeFiles/rebuild_cache.dir
-/home/wujing/code/cpp-learning/qt-learning/singals_slots/build/CMakeFiles/singals_slots.dir
-/home/wujing/code/cpp-learning/qt-learning/singals_slots/build/CMakeFiles/edit_cache.dir
-/home/wujing/code/cpp-learning/qt-learning/singals_slots/build/CMakeFiles/singals_slots_autogen.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/impl.dir/main.cpp.o CMakeFiles/impl.dir/myfather.cpp.o CMakeFiles/impl.dir/impl_autogen/mocs_compilation.cpp.o  -o impl /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.1 
