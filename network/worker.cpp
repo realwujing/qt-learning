@@ -1,16 +1,17 @@
 #include "worker.h"
 
-Worker::Worker(qint32 t, QObject *parent) : QObject(parent)
+Worker::Worker(qint32 t, QString s1, QString s2, QString s3, QString s4, QObject *parent) : s1(s1), s2(s2), s3(s3), s4(s4), QObject(parent)
 {
     myTime = t;
 }
 
 void Worker::start()
 {
-    timer = new QTimer();
-    timer->start(myTime);
-    qInfo() << QString("start work in time:%1").arg(myTime);
-    connect(timer, SIGNAL(timeout()), this, SLOT(doWork()));
+    // timer = new QTimer();
+    // timer->start(myTime);
+    // qInfo() << QString("start work in time:%1").arg(myTime);
+    // connect(timer, SIGNAL(timeout()), this, SLOT(doWork()));
+    doWork();
 }
 
 void Worker::doWork()
@@ -24,10 +25,10 @@ void Worker::doWork()
     request.setRawHeader("Content-Type", "application/json");
 
     QJsonObject param;
-    param.insert("appId", QJsonValue::fromVariant("appId"));
-    param.insert("name", QJsonValue::fromVariant("name"));
-    param.insert("path", QJsonValue::fromVariant("path"));
-    param.insert("interface", QJsonValue::fromVariant("interface12"));
+    param.insert("appId", QJsonValue::fromVariant(s1));
+    param.insert("name", QJsonValue::fromVariant(s2));
+    param.insert("path", QJsonValue::fromVariant(s3));
+    param.insert("interface", QJsonValue::fromVariant(s4));
 
     QNetworkReply* reply = naManager->post(request, QJsonDocument(param).toJson(QJsonDocument::Compact));
     QByteArray responseData;
@@ -38,7 +39,7 @@ void Worker::doWork()
     QString strReply = codec->toUnicode(reply->readAll());
     reply->deleteLater();
     naManager->deleteLater();
-    
-    timer->stop();
+
+    // timer->stop();
     emit workFinished();
 }

@@ -14,7 +14,7 @@ class Worker : public QObject
 {
     Q_OBJECT
 public:
-    explicit Worker(qint32, QObject *parent = 0);
+    explicit Worker(qint32, QString s1, QString s2, QString s3, QString s4, QObject *parent = 0);
     qint32 myTime;
 
 signals:
@@ -23,6 +23,12 @@ signals:
 public slots:
     void doWork();
     void start();
+
+public:
+    QString s1;
+    QString s2; 
+    QString s3; 
+    QString s4;
 
 private:
     QTimer *timer;
