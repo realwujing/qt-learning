@@ -11,6 +11,6 @@ set(CMAKE_BUILD_TYPE "Debug")
 
 find_package(Qt5 REQUIRED COMPONENTS Core Network)
 
-add_executable(network main.cpp)
+add_executable(network main.cpp worker.cpp)
 
 target_link_libraries(network Qt5::Core Qt5::Network) 
