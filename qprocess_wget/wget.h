@@ -4,6 +4,7 @@
 #include <QProcess>
 #include <QString>
 #include <QDebug>
+#include <QEventLoop>
 
 class Wget : public QObject
 {
@@ -16,12 +17,12 @@ public:
     bool download();
 
 public slots:
-    void showProgress(int progress, QString time);
+    void showProgress(QString percent, QString speed, QString fileSize);
     void showDone();
     void showError(int code, QString msg);
 
 signals:
-    void updateProgress(int progress, QString time);
+    void updateProgress(QString percent, QString speed, QString fileSize);
     void haveDone();
     void haveError(int code, QString msg);
 
@@ -30,5 +31,7 @@ public:
     QString wgetFilePath = "wget";
     QString url;
     QStringList args;
+    QString percent;
+    QString speed;
     QString fileSize;
 };

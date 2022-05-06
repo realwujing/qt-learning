@@ -5,9 +5,10 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
- 
+    
     Wget wget;
-    wget.url = "https://linglong-api-dev.deepin.com/bundle/org.dde.calendar_5.8.27_x86_64_20220126103119_2401723550.uab";
+    wget.url = "repo:com.qq.weixin.work.deepin/4.0.0.6007/x86_64";
     wget.download();
+    
     return a.exec();
 }
